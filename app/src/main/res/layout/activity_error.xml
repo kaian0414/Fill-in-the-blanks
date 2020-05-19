@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    android:orientation="vertical"
+    tools:context=".ErrorActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/error_error"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/error" />
+
+        <TextView
+            android:id="@+id/error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/error_error"
+            android:layout_marginTop="20dp"
+            android:text="Error!!!"
+            android:textSize="30dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/error_title"
+            android:layout_marginTop="20dp"
+            android:text="The page you are looking for is not here!"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/error_tohome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go Back to Home"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorButton"/>
+    </RelativeLayout>
+</LinearLayout>

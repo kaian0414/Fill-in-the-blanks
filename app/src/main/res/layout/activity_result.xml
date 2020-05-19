@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/result_dear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Dear"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"/>
+
+
+        <ImageView
+            android:id="@+id/result_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/win"
+            android:layout_below="@+id/result_dear"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/result_encourage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encourage Sentence"
+            android:textSize="28dp"
+            android:layout_below="@+id/result_image"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <GridLayout
+            android:id="@+id/result_numOfresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="1"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/result_encourage">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/correct" />
+
+                <TextView
+                    android:id="@+id/result_numOfCorr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="numOfCorr"
+                    android:textColor="#6f6f6f"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/wrong" />
+
+                <TextView
+                    android:id="@+id/result_numOfWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="numOfWrong"
+                    android:textColor="#6f6f6f"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/result_tohome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go Back to Home"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorButton"/>
+    </RelativeLayout>
+
+</LinearLayout>
